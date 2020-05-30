@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet">
+  <title>マークシート</title>
+</head>
+
+<body>
+  <header>
+    <div class=logo>
+      <a href="index.html">
+        <img class="logo" src="logo.png" alt="ロゴ">
+      </a>
+    </div>
+    <p>マークシートの簡単作成ツール</p>
+  </header>
+  <main id="target">
+    <form id="setting">
+      <p>
+        設問の数：<input type="number" id="nQuestion">
+      </p>
+      <p>
+        選択肢の数：<input type="number" id="nChoice">
+      </p>
+      <p>
+        回答タイプ：
+        <input type="radio" name="typeC" value="single">一択式(答え1つ)
+        <input type="radio" name="typeC" value="multi">複数選択式(答え複数)
+      </p>
+      <p>
+        選択肢タイプ：
+        <input type="radio" name="wordC" value="number">123(数字)
+        <input type="radio" name="wordC" value="word">abc(アルファベット)
+      </p>
+      <p>
+        <input type="button" id="create" value="作成">
+      </p>
+    </form>
+
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+  </main>
+</body>
+<footer>
+  <small> powered by <a href="https://www.pochi.ml/DGT/"> DGT group</a> </small>
+  <small> Open Source Tool. Code available at <a
+      href="https://github.com/katayamahide/katayamahide.github.io">GitHub</a></small>
+</footer>
+
+</html>

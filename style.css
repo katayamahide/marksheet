@@ -1,0 +1,30 @@
+.logo {
+  width: 240px;
+  vertical-align: middle;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+main div {
+  background-color: lightgrey;
+  margin: 5px 3px;
+  width: auto;
+}
+
+label {
+  user-select: none
+}
