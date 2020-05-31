@@ -1,5 +1,11 @@
 'use strict';
 
+window.onload = function () {
+    window.addEventListener('beforeunload', function (e) {
+        e.returnValue = "ページを離れます。よろしいですか？";
+    }, false);
+}
+
 //ラベル(id="question")取得
 const question = document.getElementById('question');
 //セレクト(設問の数) 作成
@@ -32,6 +38,12 @@ for (let i = 1; i <= 100; i++) {
     selectC.appendChild(option);
 }
 
+
+const btn2 = document.getElementById('remove')
+btn2.addEventListener('click', () => {
+    const main2 = document.getElementById('target');
+    main2.innerHTML = "";
+});
 
 const btn = document.getElementById('create');
 btn.addEventListener('click', () => {
