@@ -1,25 +1,4 @@
 'use strict';
-// const nQuestion = document.getElementById('nQuestion');
-// nQuestion.addEventListener('change', () => {
-//     let numQ = nQuestion.value;
-//     console.log(numQ);
-// });
-// const nChoice = document.getElementById('nChoice');
-// nChoice.addEventListener('change', () => {
-//     let numC = nChoice.value;
-//     console.log(numC);
-// })
-
-// let type1 = document.getElementById("setting");
-// type1.addEventListener('change', () => {
-//     let type = type1.typeC.value;
-// });
-
-// let word = document.getElementById("setting");
-// word.addEventListener('change', () => {
-//     console.log(word.wordC.value);
-// });
-
 const btn = document.getElementById('create');
 btn.addEventListener('click', () => {
 
