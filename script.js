@@ -30,7 +30,7 @@ btn.addEventListener('click', () => {
         div.classList.add('answer');
         let id = "q" + i;
         div.setAttribute('id', id);
-        div.innerHTML = "問" + i;
+        div.innerHTML = "問" + i + " ";
         main.appendChild(div);
 
         if (type === 'single') {
@@ -45,11 +45,11 @@ btn.addEventListener('click', () => {
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
                 if (word === "number") {
-                    label.textContent = i;
+                    label.textContent = i + " ";
                 } else if (word === "word") {
-                    label.textContent = alphabet[i];
+                    label.textContent = alphabet[i] + " ";
                 } else {
-                    label.textContent = i;
+                    label.textContent = i + " ";
                 }
                 div.appendChild(label);
             }
@@ -66,11 +66,11 @@ btn.addEventListener('click', () => {
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
                 if (word === "number") {
-                    label.textContent = i;
+                    label.textContent = i + " ";
                 } else if (word === "word") {
-                    label.textContent = alphabet[i];
+                    label.textContent = alphabet[i] + " ";
                 } else {
-                    label.textContent = i;
+                    label.textContent = i + " ";
                 }
                 div.appendChild(label);
             }
@@ -85,21 +85,9 @@ btn.addEventListener('click', () => {
                 div.appendChild(checkbox);
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
-                label.textContent = i;
+                label.textContent = i + " ";
                 div.appendChild(label);
             }
         }
     }
 });
-
-
-// let radio = document.createElement('input'); radio.setAttribute('type', 'radio'); radio.setAttribute('id', 88); radio.setAttribute('name', id); radio.setAttribute('value', 88);
-
-// let label = document.createElement('label');
-// label.setAttribute('for', 88);
-// label.textContent = 88;
-
-
-// div.appendChild(radio);
-
-// // document.form.appendChild(div);

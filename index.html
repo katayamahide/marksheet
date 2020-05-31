@@ -18,21 +18,26 @@
   </header>
   <main id="target">
     <form id="setting">
-      <p>
-        設問の数：<input type="number" id="nQuestion">
-      </p>
-      <p>
+      <label>
+        設問の数：<input type="range" min="1" max="100" id="nQuestion">
+      </label>
+      <label>
         選択肢の数：<input type="number" id="nChoice">
-      </p>
+      </label>
       <p>
         回答タイプ：
-        <input type="radio" name="typeC" value="single">一択式(答え1つ)
-        <input type="radio" name="typeC" value="multi">複数選択式(答え複数)
+        <input type="radio" id="single" name="typeC" value="single">
+        <label for="single">一択式(答え1つ)</label>
+        <input type="radio" id="multi" name="typeC" value="multi">
+        <label for="multi">複数選択式(答え複数)</label>
+
       </p>
       <p>
         選択肢タイプ：
-        <input type="radio" name="wordC" value="number">123(数字)
-        <input type="radio" name="wordC" value="word">abc(アルファベット)
+        <input type="radio" id="number" name="wordC" value="number">
+        <label for="number">123(数字)</label>
+        <input type="radio" id="word" name="wordC" value="word">
+        <label for="word">abc(アルファベット)</label>
       </p>
       <p>
         <input type="button" id="create" value="作成">
