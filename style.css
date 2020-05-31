@@ -11,12 +11,15 @@ header {
   text-align: center;
 }
 
+p {
+  margin: 3px 0px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 main div {

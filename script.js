@@ -15,7 +15,7 @@ selectQ.setAttribute('id', 'nQuestion');
 question.appendChild(selectQ);
 
 //オプション作成
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 300; i++) {
     const option = document.createElement('option');
     option.innerText = i;
     option.setAttribute('value', i);
@@ -38,6 +38,30 @@ for (let i = 1; i <= 100; i++) {
     selectC.appendChild(option);
 }
 
+const btn4 = document.getElementById("answer")
+btn4.addEventListener('click', () => {
+
+    const elements = document.getElementsByName("ans");
+    let sum = 0;
+    console.log("--- 選択したオプションは以下の通りです ---");
+
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].checked) {
+            sum = sum + parseInt(elements[i].value);
+            console.log(elements[i].value);
+        }
+    }
+
+    let ratio = Math.floor(sum / elements.length * 100);
+    const score = document.getElementById("score");
+    score.innerHTML = "正解数：" + sum + "/" + elements.length + "<br>正答率：" + ratio + "%";
+})
+
+
+const btn3 = document.getElementById('print')
+btn3.addEventListener('click', () => {
+    window.print();
+})
 
 const btn2 = document.getElementById('remove')
 btn2.addEventListener('click', () => {
@@ -73,8 +97,10 @@ btn.addEventListener('click', () => {
         div.classList.add('answer');
         let id = "q" + i;
         div.setAttribute('id', id);
-        div.innerHTML = "問" + i + " ";
+        div.innerHTML = "問" + i;
         main.appendChild(div);
+
+
         if (type === 'single') {
             for (let i = 1; i <= numC; i++) {
                 const radio = document.createElement('input');
@@ -86,11 +112,11 @@ btn.addEventListener('click', () => {
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
                 if (word === "number") {
-                    label.textContent = i + "  ";
+                    label.textContent = i;
                 } else if (word === "word") {
-                    label.textContent = alphabet[i] + "  ";
+                    label.textContent = alphabet[i];
                 } else {
-                    label.textContent = i + "  ";
+                    label.textContent = i;
                 }
                 div.appendChild(label);
                 label.insertBefore(radio, label.firstChild);
@@ -107,11 +133,11 @@ btn.addEventListener('click', () => {
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
                 if (word === "number") {
-                    label.textContent = i + " ";
+                    label.textContent = i;
                 } else if (word === "word") {
-                    label.textContent = alphabet[i] + " ";
+                    label.textContent = alphabet[i];
                 } else {
-                    label.textContent = i + " ";
+                    label.textContent = i;
                 }
                 div.appendChild(label);
                 label.insertBefore(checkbox, label.firstChild);
@@ -126,10 +152,23 @@ btn.addEventListener('click', () => {
                 checkbox.setAttribute('value', i);
                 let label = document.createElement('label');
                 label.setAttribute('for', id + ic);
-                label.textContent = i + " ";
+                label.textContent = i;
                 div.appendChild(label);
                 label.insertBefore(checkbox, label.firstChild);
             }
         }
+        const memo = document.createElement('input');
+        memo.setAttribute('type', 'text')
+        memo.setAttribute('placeholder', 'メモ')
+        div.appendChild(memo);
+
+        const label = document.createElement('label');
+        label.innerHTML = "正解";
+        const answer = document.createElement('input');
+        answer.setAttribute('type', 'checkbox');
+        answer.setAttribute('name', 'ans');
+        answer.setAttribute('value', 1);
+        label.insertBefore(answer, label.firstChild);
+        div.appendChild(label)
     }
 });

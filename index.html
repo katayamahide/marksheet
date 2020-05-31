@@ -19,40 +19,38 @@
   <main>
     <form id="setting">
       <label id="question">
-        設問の数：
-        <!-- <select name="nQuestion" id="nQuestion">
-          <option value="1">1</option>
-        </select> -->
+        設問数：
       </label>
       <label id="choice">
         選択肢の数：
-        <!-- <select name="nChoice" id="nChoice">
-          <option value="1">1</option>
-          <option value="2">2</option>
-        </select> -->
       </label>
       <p>
         回答タイプ：
         <input type="radio" id="single" name="typeC" value="single">
         <label for="single">一択式(答え1つ)</label>
-        <input type="radio" id="multi" name="typeC" value="multi">
+        <input type="radio" id="multi" name="typeC" value="multi" checked>
         <label for="multi">複数選択式(答え複数)</label>
 
       </p>
       <p>
         選択肢タイプ：
-        <input type="radio" id="number" name="wordC" value="number">
+        <input type="radio" id="number" name="wordC" value="number" checked>
         <label for="number">123(数字)</label>
         <input type="radio" id="word" name="wordC" value="word">
         <label for="word">abc(アルファベット)</label>
       </p>
+      <textarea name="" id="" cols="30" rows="5" placeholder="自由メモ欄"></textarea>
+      <p id="score"></p>
       <p>
         <input type="button" id="create" value="作成">
         <input type="button" id="remove" value="消去">
-
+        <input type="button" id="print" value="印刷">
+        <input type="button" id="answer" value="答え合わせ">
       </p>
     </form>
     <div id="target">
+
+
 
     </div>
   </main>
