@@ -75,7 +75,6 @@ btn.addEventListener('click', () => {
         div.setAttribute('id', id);
         div.innerHTML = "問" + i + " ";
         main.appendChild(div);
-        // おっさん
         if (type === 'single') {
             for (let i = 1; i <= numC; i++) {
                 const radio = document.createElement('input');
