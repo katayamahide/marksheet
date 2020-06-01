@@ -11,15 +11,19 @@ header {
   text-align: center;
 }
 
+body {
+  min-width: 100vh;
+
+
+}
+
 p {
   margin: 3px 0px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-width: 100vh;
+
 }
 
 main div {
