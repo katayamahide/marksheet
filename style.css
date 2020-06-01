@@ -1,54 +1,45 @@
-.logo {
-  width: 120px;
-  vertical-align: middle;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-body {
-  min-width: 100vh;
+ body {}
 
 
-}
+ header {}
 
-p {
-  margin: 3px 0px;
-}
+ .logo {
+   grid-area: logo;
+   vertical-align: middle;
+ }
 
-form {
-  min-width: 100vh;
+ p {
+   grid-area: p;
+ }
 
-}
+ form {
+   min-width: ;
 
-main div {
-  background-color: rgb(236, 236, 236);
-  margin: 5px 3px;
-  width: auto;
-}
+ }
 
-label {
-  user-select: none;
-}
+ main div {
+   background-color: rgb(236, 236, 236);
+   margin: 5px 3px;
+   width: auto;
+ }
+
+ label {
+   user-select: none;
+ }
 
 
-div label {
-  margin-right: 10px;
-}
+ div label {
+   margin-right: 10px;
+ }
 
-footer {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100px;
-  background-color: white;
-  align-items: center;
-  font-size: 14px;
-  color: grey;
-}
+ footer {
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100px;
+   background-color: white;
+   align-items: center;
+   font-size: 14px;
+   color: grey;
+ }

@@ -6,6 +6,7 @@ window.onload = function () {
     }, false);
 }
 
+
 //ラベル(id="question")取得
 const question = document.getElementById('question');
 //セレクト(設問の数) 作成
@@ -37,6 +38,7 @@ for (let i = 1; i <= 100; i++) {
     option.setAttribute('value', i);
     selectC.appendChild(option);
 }
+const alphabet = new Array('?', 'a', 'b', 'c', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 
 const btn4 = document.getElementById("answer")
 btn4.addEventListener('click', () => {
@@ -69,8 +71,52 @@ btn2.addEventListener('click', () => {
     main2.innerHTML = "";
 });
 
+for (let i = 1; i <= 100; i++) {
+    const main = document.getElementById('target');
+    const div = document.createElement('div');
+    div.classList.add('answer');
+    let id = "q" + i;
+    div.setAttribute('id', id);
+    div.innerHTML = "問" + i;
+    main.appendChild(div);
+
+    for (let i = 1; i <= 10; i++) {
+        const radio = document.createElement('input');
+        let ic = "a" + i;
+        radio.setAttribute('type', 'radio');
+        radio.setAttribute('id', id + ic);
+        radio.setAttribute('name', id);
+        radio.setAttribute('value', i);
+        let label = document.createElement('label');
+        label.setAttribute('for', id + ic);
+        label.textContent = i;
+        div.appendChild(label);
+        label.insertBefore(radio, label.firstChild);
+    }
+
+    const memo = document.createElement('input');
+    memo.setAttribute('type', 'text')
+    memo.setAttribute('placeholder', 'メモ')
+    div.appendChild(memo);
+
+    const label = document.createElement('label');
+    label.innerHTML = "正解";
+    const answer = document.createElement('input');
+    answer.setAttribute('type', 'checkbox');
+    answer.setAttribute('name', 'ans');
+    answer.setAttribute('value', 1);
+    label.insertBefore(answer, label.firstChild);
+    div.appendChild(label)
+}
+
+
+
+
+
 const btn = document.getElementById('create');
 btn.addEventListener('click', () => {
+    const main2 = document.getElementById('target');
+    main2.innerHTML = "";
 
     //問題数=numQを取得
     const nQuestion = document.getElementById('nQuestion');
@@ -88,7 +134,6 @@ btn.addEventListener('click', () => {
     const word1 = document.getElementById("setting");
     let word = word1.wordC.value;
 
-    const alphabet = new Array('?', 'a', 'b', 'c', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 
 
     for (let i = 1; i <= numQ; i++) {
