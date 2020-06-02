@@ -56,7 +56,7 @@ btn4.addEventListener('click', () => {
 
     let ratio = Math.floor(sum / elements.length * 100);
     const score = document.getElementById("score");
-    score.innerHTML = "正解数：" + sum + "/" + elements.length + "<br>正答率：" + ratio + "%";
+    score.innerHTML = "正解数：" + sum + "/" + elements.length + "　　　正答率：" + ratio + "%";
 })
 
 
@@ -77,21 +77,21 @@ for (let i = 1; i <= 100; i++) {
     div.classList.add('answer');
     let id = "q" + i;
     div.setAttribute('id', id);
-    div.innerHTML = "問" + i;
+    div.innerHTML = "<span>問" + i + "</span>";
     main.appendChild(div);
 
     for (let i = 1; i <= 10; i++) {
-        const radio = document.createElement('input');
+        const checkbox = document.createElement('input');
         let ic = "a" + i;
-        radio.setAttribute('type', 'radio');
-        radio.setAttribute('id', id + ic);
-        radio.setAttribute('name', id);
-        radio.setAttribute('value', i);
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.setAttribute('id', id + ic);
+        checkbox.setAttribute('name', id);
+        checkbox.setAttribute('value', i);
         let label = document.createElement('label');
         label.setAttribute('for', id + ic);
         label.textContent = i;
         div.appendChild(label);
-        label.insertBefore(radio, label.firstChild);
+        label.insertBefore(checkbox, label.firstChild);
     }
 
     const memo = document.createElement('input');
@@ -142,7 +142,7 @@ btn.addEventListener('click', () => {
         div.classList.add('answer');
         let id = "q" + i;
         div.setAttribute('id', id);
-        div.innerHTML = "問" + i;
+        div.innerHTML = "<span>問" + i + "</span>";
         main.appendChild(div);
 
 

@@ -1,26 +1,99 @@
- body {}
+ body {
+   width: 800px;
+   margin: 0px auto;
+   display: grid;
+   grid-template:
+     "header"auto "main"1fr "footer"50px;
+   grid-gap: 10px;
+ }
 
+ header {
+   grid-area: header;
+   display: grid;
+   grid-template:
+     "...   ...""logo title"
+     "logo desc";
+   grid-gap: 10px;
 
- header {}
+ }
 
- .logo {
+ img {
+   display: block;
    grid-area: logo;
-   vertical-align: middle;
+   margin-right: auto;
+   /* margin: 0 auto; */
+ }
+
+ h1 {
+   font-size: 1.5rem;
+   grid-area: title;
+   margin: 0px 0px;
+   line-height: 50px;
+ }
+
+ ul {
+   /* list-style: none; */
+   font-size: 1rem;
+   grid-area: desc;
+   margin: 0px;
+   padding-inline-start: 20px;
+ }
+
+ main {
+   grid-area: main;
+   display: grid;
+   grid-template:
+     "form   textarea"
+     "button score"
+     "target target"/237px 1fr;
+   grid-gap: 20px;
  }
 
  p {
-   grid-area: p;
+   margin-block-start: 0em;
+   margin-block-end: 0em;
  }
 
  form {
-   min-width: ;
+   grid-area: form;
+   margin-right: auto;
+ }
 
+ #textarea {
+   display: flex;
+   align-items: flex-end;
+   grid-area: textarea;
+ }
+
+ #button {
+   grid-area: button;
+   margin-right: auto;
  }
 
  main div {
-   background-color: rgb(236, 236, 236);
-   margin: 5px 3px;
+   /* background-color: rgb(236, 236, 236); */
+   margin: 0 3px 5px 0;
    width: auto;
+ }
+
+ #score {
+   grid-area: score;
+ }
+
+ #remove {
+   grid-area: remove;
+ }
+
+ #print {
+   grid-area: print;
+ }
+
+ #ansewr {
+   grid-area: answer;
+ }
+
+ #target {
+   grid-area: target;
  }
 
  label {
@@ -28,16 +101,22 @@
  }
 
 
+
  div label {
    margin-right: 10px;
  }
 
+ span {
+   display: inline-block;
+   width: 50px
+ }
+
  footer {
+   grid-area: footer;
    margin-top: 30px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   height: 100px;
    background-color: white;
    align-items: center;
    font-size: 14px;

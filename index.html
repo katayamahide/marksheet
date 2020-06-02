@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Mr.Marksheet-マークシート回答フォームの無料作成ツール</title>
-  <meta name="discription" content="無料でマークシート回答フォームを簡単にWeb上で作成できるツール。問題数や選択肢のカスタマイズが自由にできます。簡単な答え合わせ機能やメモ機能つき。">
+  <meta name="discription" content="マークシート回答フォームを簡単にWeb上で作成できる無料ツール。問題数や選択肢のカスタマイズが自由にできます。簡単な答え合わせ機能やメモ機能つき。">
   <meta property="og:url" content="https://www.pochi.ml/marksheet/index.html">
-  <meta property="og:title" content="無料のオンラインのマークシート解答フォーム">
+  <meta property="og:title" content="オンラインのマークシート回答フォームの無料作成ツール">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="無料でマークシート回答フォームを簡単にWeb上で作成できるツール。問題数や選択肢のカスタマイズが自由にできます。簡単な答え合わせ機能やメモ機能つき。">
+  <meta property="og:description" content="マークシート回答フォームを簡単にWeb上で作成できる無料ツール。問題数や選択肢のカスタマイズが自由にできます。簡単な答え合わせ機能やメモ機能つき。">
   <meta property="og:image" content="https://www.pochi.ml/marksheet/logo.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@uyc3mp">
@@ -23,7 +23,11 @@
 <body>
   <header>
     <img class="logo" src="logo.png" alt="Mr.Marksheet">
-    <h2>マークシートの無料作成ツール</h2>
+    <h1>マークシート回答フォームの作成ツール</h1>
+    <ul>
+      <li>問題数、選択肢の数は自由に変更可</li>
+      <li>メモや採点など便利機能つき</li>
+    </ul>
   </header>
   <main>
     <form id="setting">
@@ -33,30 +37,30 @@
       <p id="choice">
         選択肢：
       </p>
-      <p>
-        回答タイプ：
-        <input type="radio" id="single" name="typeC" value="single">
-        <label for="single">単一選択</label>
-        <input type="radio" id="multi" name="typeC" value="multi" checked>
-        <label for="multi">複数選択</label>
-
+      正答数：
+      <input type="radio" id="single" name="typeC" value="single">
+      <label for="single">一択</label>
+      <input type="radio" id="multi" name="typeC" value="multi" checked>
+      <label for="multi">複数</label>
       </p>
-      <p>
-        連番：
-        <input type="radio" id="number" name="wordC" value="number" checked>
-        <label for="number">数字</label>
-        <input type="radio" id="word" name="wordC" value="word">
-        <label for="word">アルファベット</label>
+      振番号：
+      <input type="radio" id="number" name="wordC" value="number" checked>
+      <label for="number">数字</label>
+      <input type="radio" id="word" name="wordC" value="word">
+      <label for="word">英字</label>
       </p>
-      <textarea name="" id="" cols="30" rows="5" placeholder="例：メモ欄(保存時にご利用ください)"></textarea>
-      <p id="score"></p>
+    </form>
 
+    <div id="textarea">
+      <textarea name="" id="" cols="40" rows="6" placeholder="例：メモ欄(保存時にご利用ください)"></textarea>
+    </div>
+    <p id="score">※正解に☑をして採点を押すと、正解数が表示されます。</p>
+    <div id="button">
       <input type="button" id="create" value="作成">
       <input type="button" id="remove" value="消去">
       <input type="button" id="print" value="印刷">
-      <input type="button" id="answer" value="答え合わせ">
-
-    </form>
+      <input type="button" id="answer" value="採点">
+    </div>
     <div id="target">
     </div>
   </main>
