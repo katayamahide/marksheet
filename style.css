@@ -3,8 +3,8 @@
    margin: 0px auto;
    display: grid;
    grid-template:
-     "header"auto "main"1fr "footer"50px;
-   grid-gap: 10px;
+     "..."auto"header"auto "main"1fr "footer"auto;
+   grid-gap: 20px;
  }
 
  header {
@@ -13,7 +13,6 @@
    grid-template:
      "...   ...""logo title"
      "logo desc";
-   grid-gap: 10px;
 
  }
 
@@ -45,7 +44,7 @@
    grid-template:
      "form   textarea"
      "button score"
-     "target target"/237px 1fr;
+     "target target"/230px 1fr;
    grid-gap: 20px;
  }
 
@@ -114,12 +113,9 @@
 
  footer {
    grid-area: footer;
-   margin-top: 30px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   background-color: white;
    align-items: center;
-   font-size: 14px;
    color: grey;
  }
