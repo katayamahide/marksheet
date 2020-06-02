@@ -16,12 +16,13 @@ selectQ.setAttribute('id', 'nQuestion');
 question.appendChild(selectQ);
 
 //オプション作成
-for (let i = 1; i <= 300; i++) {
+for (let i = 1; i <= 999; i++) {
     const option = document.createElement('option');
     option.innerText = i;
     option.setAttribute('value', i);
     selectQ.appendChild(option);
 }
+selectQ.options[99].selected = true;
 
 //ラベル(id="choice")取得
 const choice = document.getElementById('choice');
@@ -38,6 +39,8 @@ for (let i = 1; i <= 100; i++) {
     option.setAttribute('value', i);
     selectC.appendChild(option);
 }
+selectC.options[9].selected = true;
+
 const alphabet = new Array('?', 'a', 'b', 'c', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
 
 const btn4 = document.getElementById("answer")
