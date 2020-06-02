@@ -61,7 +61,6 @@
 
  #textarea {
    display: flex;
-   align-items: flex-end;
    grid-area: textarea;
  }
 
