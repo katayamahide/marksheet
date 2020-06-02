@@ -70,8 +70,9 @@
    margin-right: auto;
  }
 
- main div {
-   /* background-color: rgb(236, 236, 236); */
+ #target div {
+   display: inline-block;
+   background-color: rgb(236, 236, 236);
    margin: 0 3px 5px 0;
    width: auto;
  }
